@@ -1,0 +1,11 @@
+# Some random notes
+
+$ docker build .
+
+- sh -c "python manage.py runserver 0.0.0.0:8000"
+    + sh -c --> means shell run command
+    + "python manage.py runserver 0.0.0.0:8000" --> the way to run a Django app
+    + 0.0.0.0:8000 --> 0.0.0.0 : Availability of all the IP address that run the container | 8000: run on port 8000 of the container
+
+$ docker-compose build
+$ docker-compose run app sh -c "django-admin.py startproject app ."
