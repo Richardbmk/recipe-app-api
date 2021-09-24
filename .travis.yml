@@ -7,5 +7,8 @@ services:
 
 before_script: pip install docker-compose
 
+before_install:
+  - echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin
+
 script:
   - docker-compose run -rm app sh -c "python manage.py test && flake8"
